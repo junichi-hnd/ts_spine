@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "removeComments": true,
+    "noEmitOnError": false,
+    "sourceMap": false
+  },
+  "filesGlob": [
+    "**/*.ts",
+    "**/*.tsx",
+    "!node_modules/**"
+  ],
+  "compileOnSave": true,
+  "exclude": [
+    "typings/main.d.ts",
+    "typings/main"
+  ],
+  "files": [
+    "app/ts/actions/LoadingAction.ts",
+    "app/ts/constans/LoadingManifest.ts",
+    "app/ts/events/Event.ts",
+    "app/ts/events/EventDispatcher.ts",
+    "app/ts/events/IEventDispatcher.ts",
+    "typings/browser.d.ts",
+    "app/ts/main.ts"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "name": "ts_spine",
+  "description": "this is mock of spine using typescript.",
+  "main": "main.js",
+  "authors": [
+    "Junichi Honda <junichi.hnd@gmail.com>"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "typescript",
+    "spine"
+  ],
+  "homepage": "https://github.com/junichi-hnd/ts_spine",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "PreloadJS": "^0.6.2",
+    "gsap": "^1.18.2",
+    "EaselJS": "easeljs#^0.8.2"
+  }
+}
