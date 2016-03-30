@@ -54,7 +54,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "270f70378e9a335dc204"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "8145b6a2f5f7257a8ef8"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -572,7 +572,7 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(17);
+	__webpack_require__(18);
 	module.exports = __webpack_require__(8);
 
 
@@ -596,7 +596,7 @@
 	        value: function getPartsManifest() {
 	            var prefix = './images/parts/';
 	            var jsonPrefix = './data/';
-	            return [{ src: './images/parts.png', id: 'sprite' }, { src: prefix + 'eye_indifferent/complementary.png' }, { src: prefix + 'eye_indifferent/default.png' }, { src: prefix + 'eye_surprised/complementary.png' }, { src: prefix + 'eye_surprised/default.png' }, { src: prefix + 'front_bracer/complementary.png' }, { src: prefix + 'front_bracer/default.png' }, { src: prefix + 'front_fist_closed/complementary.png' }, { src: prefix + 'front_fist_closed/default.png' }, { src: prefix + 'front_fist_open/complementary.png' }, { src: prefix + 'front_fist_open/default.png' }, { src: prefix + 'front_foot/complementary.png' }, { src: prefix + 'front_foot/default.png' }, { src: prefix + 'front_foot_bend_01/complementary.png' }, { src: prefix + 'front_foot_bend_01/default.png' }, { src: prefix + 'front_foot_bend_02/complementary.png' }, { src: prefix + 'front_foot_bend_02/default.png' }, { src: prefix + 'front_shin/complementary.png' }, { src: prefix + 'front_shin/default.png' }, { src: prefix + 'front_thigh/complementary.png' }, { src: prefix + 'front_thigh/default.png' }, { src: prefix + 'front_upper_arm/complementary.png' }, { src: prefix + 'front_upper_arm/default.png' }, { src: prefix + 'goggles/complementary.png' }, { src: prefix + 'goggles/default.png' }, { src: prefix + 'goggles/goggles.png' }, { src: prefix + 'gun/complementary.png' }, { src: prefix + 'gun/default.png' }, { src: prefix + 'head/complementary.png' }, { src: prefix + 'head/default.png' }, { src: prefix + 'mouth_grind/complementary.png' }, { src: prefix + 'mouth_grind/default.png' }, { src: prefix + 'mouth_oooo/complementary.png' }, { src: prefix + 'mouth_oooo/default.png' }, { src: prefix + 'mouth_smile/complementary.png' }, { src: prefix + 'mouth_smile/default.png' }, { src: prefix + 'muzzle/complementary.png' }, { src: prefix + 'muzzle/default.png' }, { src: prefix + 'neck/complementary.png' }, { src: prefix + 'neck/default.png' }, { src: prefix + 'rear_bracer/complementary.png' }, { src: prefix + 'rear_bracer/default.png' }, { src: prefix + 'rear_foot/complementary.png' }, { src: prefix + 'rear_foot/default.png' }, { src: prefix + 'rear_foot_bend_01/complementary.png' }, { src: prefix + 'rear_foot_bend_01/default.png' }, { src: prefix + 'rear_foot_bend_02/complementary.png' }, { src: prefix + 'rear_foot_bend_02/default.png' }, { src: prefix + 'rear_shin/complementary.png' }, { src: prefix + 'rear_shin/default.png' }, { src: prefix + 'rear_thigh/complementary.png' }, { src: prefix + 'rear_thigh/default.png' }, { src: prefix + 'rear_upper_arm/complementary.png' }, { src: prefix + 'rear_upper_arm/default.png' }, { src: prefix + 'torso/complementary.png' }, { src: prefix + 'torso/default.png' }, { src: jsonPrefix + '/parts.json', id: LoadingManifest.PARTS_JSON }, { src: jsonPrefix + '/skelton.json', id: LoadingManifest.SKELTON_JSON }];
+	            return [{ src: './images/parts.png', id: 'sprite' }, { src: prefix + 'eye_indifferent.png' }, { src: prefix + 'eye_surprised.png' }, { src: prefix + 'front_bracer.png' }, { src: prefix + 'front_fist_closed.png' }, { src: prefix + 'front_fist_open.png' }, { src: prefix + 'front_foot_bend1.png' }, { src: prefix + 'front_foot_bend2.png' }, { src: prefix + 'front_foot.png' }, { src: prefix + 'front_shin.png' }, { src: prefix + 'front_thigh.png' }, { src: prefix + 'front_upper_arm.png' }, { src: prefix + 'goggles.png' }, { src: prefix + 'gun.png' }, { src: prefix + 'head.png' }, { src: prefix + 'mouth_grind.png' }, { src: prefix + 'mouth_oooo.png' }, { src: prefix + 'mouth_smile.png' }, { src: prefix + 'muzzle.png' }, { src: prefix + 'neck.png' }, { src: prefix + 'rear_bracer.png' }, { src: prefix + 'rear_foot_bend1.png' }, { src: prefix + 'rear_foot_bend2.png' }, { src: prefix + 'rear_foot.png' }, { src: prefix + 'rear_shin.png' }, { src: prefix + 'rear_thigh.png' }, { src: prefix + 'rear_upper_arm.png' }, { src: prefix + 'torso.png' }, { src: jsonPrefix + '/parts.json', id: LoadingManifest.PARTS_JSON }, { src: jsonPrefix + '/skelton.json', id: LoadingManifest.SKELTON_JSON }];
 	        }
 	    }, {
 	        key: 'PARTS_JSON',
@@ -1346,12 +1346,14 @@
 	var Event_1 = __webpack_require__(2);
 	var LoadingAction_1 = __webpack_require__(6);
 	var LoadingManifest_1 = __webpack_require__(1);
+	var SkeletonRenderer_1 = __webpack_require__(9);
 	
 	var Main = function () {
 	    function Main() {
 	        _classCallCheck(this, Main);
 	
 	        this.CLASS_NAME = 'Main';
+	        console.log(this.CLASS_NAME + '.ts');
 	        this.onCompleted = this.onCompleted.bind(this);
 	    }
 	
@@ -1367,19 +1369,19 @@
 	        key: 'onCompleted',
 	        value: function onCompleted(event) {
 	            console.log(this.CLASS_NAME + '.ts >> loading completed!');
-	            var renderer = new spine.SkeletonRenderer(event.params.sprite, event.params.partsJSON);
+	            var renderer = new SkeletonRenderer_1.default('./images/parts/');
 	            renderer.scale = 0.6;
-	            renderer.load(event.params.skeltonJSON);
+	            renderer.load(JSON.stringify(event.params.skeltonJSON));
 	            renderer.state.data.defaultMix = 0.4;
 	            renderer.state.setAnimationByName(0, 'walk', true);
 	            renderer.state.addAnimationByName(0, 'jump', false, 3);
 	            renderer.state.addAnimationByName(0, 'run', true, 0);
 	            renderer.skeleton.x = 320;
 	            renderer.skeleton.y = 450;
-	            var canvas = document.getElementsByTagName('canvas')[0];
+	            var canvas = document.getElementById('spine');
 	            canvas.width = window.innerWidth;
 	            canvas.height = window.innerHeight;
-	            renderer.animate(canvas);
+	            renderer.animate('spine');
 	        }
 	    }]);
 	
@@ -1391,18 +1393,120 @@
 
 /***/ },
 /* 9 */
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	var SkeletonRenderer = function () {
+	    function SkeletonRenderer(imagesPath) {
+	        _classCallCheck(this, SkeletonRenderer);
+	
+	        this.imagesPath = imagesPath;
+	        this.lastTime = Date.now();
+	    }
+	
+	    _createClass(SkeletonRenderer, [{
+	        key: "load",
+	        value: function load(jsonText) {
+	            var imagesPath = this.imagesPath;
+	            var json = new spine.SkeletonJson({
+	                newRegionAttachment: function newRegionAttachment(skin, name, path) {
+	                    var image = new Image();
+	                    image.src = "" + imagesPath + path + ".png";
+	                    var attachment = new spine.RegionAttachment(name);
+	                    attachment.rendererObject = image;
+	                    return attachment;
+	                },
+	                newBoundingBoxAttachment: function newBoundingBoxAttachment(skin, name) {
+	                    return new spine.BoundingBoxAttachment(name);
+	                }
+	            });
+	            json.scale = this.scale;
+	            this.skeletonData = json.readSkeletonData(JSON.parse(jsonText));
+	            spine.Bone.yDown = true;
+	            this.skeleton = new spine.Skeleton(this.skeletonData);
+	            var stateData = new spine.AnimationStateData(this.skeletonData);
+	            this.state = new spine.AnimationState(stateData);
+	        }
+	    }, {
+	        key: "update",
+	        value: function update() {
+	            var now = Date.now();
+	            var delta = (now - this.lastTime) * 0.001;
+	            this.lastTime = now;
+	            this.state.update(delta);
+	            this.state.apply(this.skeleton);
+	            this.skeleton.updateWorldTransform();
+	        }
+	    }, {
+	        key: "render",
+	        value: function render(context) {
+	            var skeleton = this.skeleton;
+	            var drawOrder = skeleton.drawOrder;
+	            context.translate(skeleton.x, skeleton.y);
+	            var num = drawOrder.length;
+	            for (var i = 0; i < num; i++) {
+	                var slot = drawOrder[i];
+	                var attachment = slot.attachment;
+	                if (!(attachment instanceof spine.RegionAttachment)) continue;
+	                var bone = slot.bone;
+	                var x = bone.worldX + attachment.x * bone.m00 + attachment.y * bone.m01;
+	                var y = bone.worldY + attachment.x * bone.m10 + attachment.y * bone.m11;
+	                var rotation = -(bone.worldRotation + attachment.rotation) * Math.PI / 180;
+	                var w = attachment.width * bone.worldScaleX,
+	                    h = attachment.height * bone.worldScaleY;
+	                context.translate(x, y);
+	                context.rotate(rotation);
+	                context.drawImage(attachment.rendererObject, -w / 2, -h / 2, w, h);
+	                context.rotate(-rotation);
+	                context.translate(-x, -y);
+	            }
+	            context.translate(-skeleton.x, -skeleton.y);
+	        }
+	    }, {
+	        key: "animate",
+	        value: function animate(id) {
+	            var _this = this;
+	
+	            var canvas = document.getElementById(id);
+	            var context = canvas.getContext('2d');
+	            var requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || function (callback) {
+	                window.setTimeout(callback, 1000 / 60);
+	            };
+	            var renderFrame = function renderFrame() {
+	                context.clearRect(0, 0, canvas.width, canvas.height);
+	                _this.update();
+	                _this.render(context);
+	                requestAnimationFrame(renderFrame);
+	            };
+	            renderFrame();
+	        }
+	    }]);
+	
+	    return SkeletonRenderer;
+	}();
+	
+	Object.defineProperty(exports, "__esModule", { value: true });
+	exports.default = SkeletonRenderer;
+
+/***/ },
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	  XmlEntities: __webpack_require__(11),
-	  Html4Entities: __webpack_require__(10),
+	  XmlEntities: __webpack_require__(12),
+	  Html4Entities: __webpack_require__(11),
 	  Html5Entities: __webpack_require__(3),
 	  AllHtmlEntities: __webpack_require__(3)
 	};
 
 
 /***/ },
-/* 10 */
+/* 11 */
 /***/ function(module, exports) {
 
 	var HTML_ALPHA = ['apos', 'nbsp', 'iexcl', 'cent', 'pound', 'curren', 'yen', 'brvbar', 'sect', 'uml', 'copy', 'ordf', 'laquo', 'not', 'shy', 'reg', 'macr', 'deg', 'plusmn', 'sup2', 'sup3', 'acute', 'micro', 'para', 'middot', 'cedil', 'sup1', 'ordm', 'raquo', 'frac14', 'frac12', 'frac34', 'iquest', 'Agrave', 'Aacute', 'Acirc', 'Atilde', 'Auml', 'Aring', 'Aelig', 'Ccedil', 'Egrave', 'Eacute', 'Ecirc', 'Euml', 'Igrave', 'Iacute', 'Icirc', 'Iuml', 'ETH', 'Ntilde', 'Ograve', 'Oacute', 'Ocirc', 'Otilde', 'Ouml', 'times', 'Oslash', 'Ugrave', 'Uacute', 'Ucirc', 'Uuml', 'Yacute', 'THORN', 'szlig', 'agrave', 'aacute', 'acirc', 'atilde', 'auml', 'aring', 'aelig', 'ccedil', 'egrave', 'eacute', 'ecirc', 'euml', 'igrave', 'iacute', 'icirc', 'iuml', 'eth', 'ntilde', 'ograve', 'oacute', 'ocirc', 'otilde', 'ouml', 'divide', 'Oslash', 'ugrave', 'uacute', 'ucirc', 'uuml', 'yacute', 'thorn', 'yuml', 'quot', 'amp', 'lt', 'gt', 'oelig', 'oelig', 'scaron', 'scaron', 'yuml', 'circ', 'tilde', 'ensp', 'emsp', 'thinsp', 'zwnj', 'zwj', 'lrm', 'rlm', 'ndash', 'mdash', 'lsquo', 'rsquo', 'sbquo', 'ldquo', 'rdquo', 'bdquo', 'dagger', 'dagger', 'permil', 'lsaquo', 'rsaquo', 'euro', 'fnof', 'alpha', 'beta', 'gamma', 'delta', 'epsilon', 'zeta', 'eta', 'theta', 'iota', 'kappa', 'lambda', 'mu', 'nu', 'xi', 'omicron', 'pi', 'rho', 'sigma', 'tau', 'upsilon', 'phi', 'chi', 'psi', 'omega', 'alpha', 'beta', 'gamma', 'delta', 'epsilon', 'zeta', 'eta', 'theta', 'iota', 'kappa', 'lambda', 'mu', 'nu', 'xi', 'omicron', 'pi', 'rho', 'sigmaf', 'sigma', 'tau', 'upsilon', 'phi', 'chi', 'psi', 'omega', 'thetasym', 'upsih', 'piv', 'bull', 'hellip', 'prime', 'prime', 'oline', 'frasl', 'weierp', 'image', 'real', 'trade', 'alefsym', 'larr', 'uarr', 'rarr', 'darr', 'harr', 'crarr', 'larr', 'uarr', 'rarr', 'darr', 'harr', 'forall', 'part', 'exist', 'empty', 'nabla', 'isin', 'notin', 'ni', 'prod', 'sum', 'minus', 'lowast', 'radic', 'prop', 'infin', 'ang', 'and', 'or', 'cap', 'cup', 'int', 'there4', 'sim', 'cong', 'asymp', 'ne', 'equiv', 'le', 'ge', 'sub', 'sup', 'nsub', 'sube', 'supe', 'oplus', 'otimes', 'perp', 'sdot', 'lceil', 'rceil', 'lfloor', 'rfloor', 'lang', 'rang', 'loz', 'spades', 'clubs', 'hearts', 'diams'];
@@ -1555,7 +1659,7 @@
 
 
 /***/ },
-/* 11 */
+/* 12 */
 /***/ function(module, exports) {
 
 	var ALPHA_INDEX = {
@@ -1716,7 +1820,7 @@
 
 
 /***/ },
-/* 12 */
+/* 13 */
 /***/ function(module, exports) {
 
 	// Copyright Joyent, Inc. and other Node contributors.
@@ -1802,7 +1906,7 @@
 
 
 /***/ },
-/* 13 */
+/* 14 */
 /***/ function(module, exports) {
 
 	// Copyright Joyent, Inc. and other Node contributors.
@@ -1872,17 +1976,17 @@
 
 
 /***/ },
-/* 14 */
+/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	exports.decode = exports.parse = __webpack_require__(12);
-	exports.encode = exports.stringify = __webpack_require__(13);
+	exports.decode = exports.parse = __webpack_require__(13);
+	exports.encode = exports.stringify = __webpack_require__(14);
 
 
 /***/ },
-/* 15 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1894,7 +1998,7 @@
 
 
 /***/ },
-/* 16 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*eslint-env browser*/
@@ -1935,7 +2039,7 @@
 	};
 	ansiHTML.setColors(colors);
 	
-	var Entities = __webpack_require__(9).AllHtmlEntities;
+	var Entities = __webpack_require__(10).AllHtmlEntities;
 	var entities = new Entities();
 	
 	exports.showProblems =
@@ -1976,7 +2080,7 @@
 
 
 /***/ },
-/* 17 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(__resourceQuery, module) {/*eslint-env browser*/
@@ -1991,7 +2095,7 @@
 	  warn: true
 	};
 	if (true) {
-	  var querystring = __webpack_require__(14);
+	  var querystring = __webpack_require__(15);
 	  var overrides = querystring.parse(__resourceQuery.slice(1));
 	  if (overrides.path) options.path = overrides.path;
 	  if (overrides.timeout) options.timeout = overrides.timeout;
@@ -2070,11 +2174,11 @@
 	}
 	
 	function createReporter() {
-	  var strip = __webpack_require__(15);
+	  var strip = __webpack_require__(16);
 	
 	  var overlay;
 	  if (typeof document !== 'undefined' && options.overlay) {
-	    overlay = __webpack_require__(16);
+	    overlay = __webpack_require__(17);
 	  }
 	
 	  return {
@@ -2096,7 +2200,7 @@
 	  };
 	}
 	
-	var processUpdate = __webpack_require__(18);
+	var processUpdate = __webpack_require__(19);
 	
 	var customHandler;
 	function processMessage(obj) {
@@ -2135,10 +2239,10 @@
 	  };
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, "?path=/__webpack_hmr&timeout=20000&reload=true", __webpack_require__(19)(module)))
+	/* WEBPACK VAR INJECTION */}.call(exports, "?path=/__webpack_hmr&timeout=20000&reload=true", __webpack_require__(20)(module)))
 
 /***/ },
-/* 18 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -2276,7 +2380,7 @@
 
 
 /***/ },
-/* 19 */
+/* 20 */
 /***/ function(module, exports) {
 
 	module.exports = function(module) {

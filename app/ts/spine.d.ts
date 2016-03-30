@@ -46,7 +46,6 @@ declare module spine {
         data: any;
         skeleton: any;
         parent: any;
-        yDown: boolean;
         x: number;
         y: number;
         rotation: number;
@@ -63,7 +62,7 @@ declare module spine {
         worldY: number;
         worldRotation: number;
         worldScaleX: number;
-        worldScaley: number;
+        worldScaleY: number;
         worldFlipX: boolean;
         worldFlipY: boolean;
 
@@ -74,10 +73,14 @@ declare module spine {
         worldToLocal(): void;
         localToWorld(): void;
 
+        static yDown: boolean;
+
         constructor(boneData: any, skeleton: any, parent: any);
     }
 
     export class Slot{
+        bone: spine.Bone;
+        slotData: spine.SlotData;
         r: number;
         g: number;
         b: number;
@@ -91,7 +94,7 @@ declare module spine {
         setToSetupPose():void;
         getAttachmentTime():number;
 
-        constructor(slotData: any, bone:any);
+        constructor(slotData: any, bone: any);
     }
 
     export class IkConstraint{
@@ -543,7 +546,7 @@ declare module spine {
         attachmentLoader: any;
         scale: number;
 
-        readSkeletonData(root: Object, name: string): void;
+        readSkeletonData(root: Object, name?: string): void;
         readAttachment(skin: any, name: string, map: Object): void;
         readAnimation(name: string, map: Object, skeletonData: spine.SkeletonData): void;
         readCurve(timeline: any, frameIndex: number, valueMap: Object): void;
@@ -684,8 +687,10 @@ declare module spine {
         load(jsonText: string): void;
         update(): void;
         render(context: any): void;
-        animate(canvas: HTMLCanvasElement): void;
+        animate(id: string): void;
+        // animate(canvas: HTMLCanvasElement): void;
+        constructor(imagePath: string);
 
-        constructor(imagesPath: string, spriteJSON: string);
+        // constructor(imagesPath: string, spriteJSON: string);
     }
 }

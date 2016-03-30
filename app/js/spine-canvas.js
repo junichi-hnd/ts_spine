@@ -1,10 +1,10 @@
 /******************************************************************************
  * Spine Runtimes Software License
  * Version 2.3
- * 
+ *
  * Copyright (c) 2013-2015, Esoteric Software
  * All rights reserved.
- * 
+ *
  * You are granted a perpetual, non-exclusive, non-sublicensable and
  * non-transferable license to use, install, execute and perform the Spine
  * Runtimes Software (the "Software") and derivative works solely for personal
@@ -16,7 +16,7 @@
  * or other intellectual property or proprietary rights notices on or in the
  * Software, including any copy thereof. Redistributions in binary or source
  * form must include this license and terms.
- * 
+ *
  * THIS SOFTWARE IS PROVIDED BY ESOTERIC SOFTWARE "AS IS" AND ANY EXPRESS OR
  * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
  * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
@@ -29,14 +29,8 @@
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *****************************************************************************/
 
-spine.SkeletonRenderer = function (sprite, spriteJSON) {
-	this.sprite = sprite;
-	this.spriteJSON = spriteJSON;
-	var partState = {};
-	Object.keys(spriteJSON).forEach(function(name) {
-		partState[name] = 'default';
-	});
-	this.partState = partState;
+spine.SkeletonRenderer = function (imagesPath) {
+	this.imagesPath = imagesPath;
 	this.lastTime = Date.now();
 };
 
@@ -45,12 +39,15 @@ spine.SkeletonRenderer.prototype = {
 	state: null,
 	scale: 1,
 	skeleton: null,
-	
-	load: function(skeltonJSON) {
+
+	load: function(jsonText) {
+		var imagesPath = this.imagesPath;
 		var json = new spine.SkeletonJson({
 			newRegionAttachment: function (skin, name, path) {
+				var image = new Image();
+				image.src = imagesPath + path + ".png";
 				var attachment = new spine.RegionAttachment(name);
-				attachment.name = path;
+				attachment.rendererObject = image;
 				return attachment;
 			},
 			newBoundingBoxAttachment: function (skin, name) {
@@ -58,9 +55,9 @@ spine.SkeletonRenderer.prototype = {
 			}
 		});
 		json.scale = this.scale;
-		this.skeletonData = json.readSkeletonData(skeltonJSON);
+		this.skeletonData = json.readSkeletonData(JSON.parse(jsonText));
 		spine.Bone.yDown = true;
-		
+
 		this.skeleton = new spine.Skeleton(this.skeletonData);
 
 		var stateData = new spine.AnimationStateData(this.skeletonData);
@@ -69,7 +66,7 @@ spine.SkeletonRenderer.prototype = {
 
 	update: function() {
 		var now = Date.now();
-		var delta = (now - this.lastTime) / 1000;
+		var delta = (now - this.lastTime) * 0.001;
 		this.lastTime = now;
 
 		this.state.update(delta);
@@ -93,8 +90,7 @@ spine.SkeletonRenderer.prototype = {
 			var w = attachment.width * bone.worldScaleX, h = attachment.height * bone.worldScaleY;
 			context.translate(x, y);
 			context.rotate(rotation);
-			var rect = this.spriteJSON[attachment.name][this.partState[attachment.name]];
-			context.drawImage(this.sprite, rect.x, rect.y, rect.width, rect.height, -w / 2, -h / 2, w, h);
+			context.drawImage(attachment.rendererObject, -w / 2, -h / 2, w, h);
 			context.rotate(-rotation);
 			context.translate(-x, -y);
 		}
@@ -102,14 +98,15 @@ spine.SkeletonRenderer.prototype = {
 		context.translate(-skeleton.x, -skeleton.y);
 	},
 
-	animate: function (canvas) {
+	animate: function (id) {
+		var canvas = document.getElementById(id);
 		var context = canvas.getContext("2d");
 		var requestAnimationFrame = window.requestAnimationFrame ||
-			window.webkitRequestAnimationFrame ||
-			window.mozRequestAnimationFrame ||
-			function (callback) {
-				window.setTimeout(callback, 1000 / 60);
-			};
+				window.webkitRequestAnimationFrame ||
+				window.mozRequestAnimationFrame ||
+				function (callback) {
+					window.setTimeout(callback, 1000 / 60);
+				};
 		var self = this;
 		function renderFrame () {
 			context.clearRect(0, 0, canvas.width, canvas.height);

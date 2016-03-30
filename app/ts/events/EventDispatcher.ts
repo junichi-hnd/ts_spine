@@ -10,7 +10,7 @@ class EventDispatcher implements IEventDispatcher {
     this._context = context;
   }
 
-  addEventListener(type: string, callback: Function, context: any, priority: number = 0): void {
+  addEventListener(type: string, callback: Function, context?: any, priority: number = 0): void {
     this._events[type] = this._events.hasOwnProperty(type) ?
       this._events[type] : {};
 
@@ -39,7 +39,7 @@ class EventDispatcher implements IEventDispatcher {
     }
   }
 
-  on(type: string, callback: Function, context: any, priority: number = 0): void {
+  on(type: string, callback: Function, context?: any, priority: number = 0): void {
     this.addEventListener(type, callback, context, priority);
   }
   removeEventListener(type: string, callback: Function): void {
@@ -61,19 +61,19 @@ class EventDispatcher implements IEventDispatcher {
     }
   }
 
-  off(type:string, callback:Function):void {
+  off(type: string, callback: Function): void {
     this.removeEventListener(type, callback);
   }
 
-  hasEventListener(type:string, callback:Function):boolean {
-    const listeners:any = this._events[type] ? this._events[type].listeners : null;
+  hasEventListener(type: string, callback: Function): boolean {
+    const listeners: any = this._events[type] ? this._events[type].listeners : null;
     if (!listeners) {
       return false;
     }
     if (!callback) {
       return listeners.length > 0;
     }
-    for (let i:number = 0, length:number = listeners.length; i < length; i++) {
+    for (let i: number = 0, length:number = listeners.length; i < length; i++) {
       const listener:any = listeners[i];
       if (listener.callback === callback) {
         return true;
@@ -84,14 +84,14 @@ class EventDispatcher implements IEventDispatcher {
 
   dispatchEvent(event):void {
     const type: string = event.type;
-    const _eventType:any = this._events[type];
-    const listeners:Array<any> = (_eventType !== null && typeof _eventType !== 'undefined') ? _eventType.listeners : null;
+    const _eventType: any = this._events[type];
+    const listeners: Array<any> = (_eventType !== null && typeof _eventType !== 'undefined') ? _eventType.listeners : null;
     if (!listeners || listeners.length < 1) {
       return;
     }
     for (let i:number = listeners.length - 1; i >= 0; i--) {
-      const listener:any = listeners[i];
-      const callback:Function = listener.callback;
+      const listener: any = listeners[i];
+      const callback: Function = listener.callback;
       const callbackContext = listener.context ? listener.context : this._context;
       if (!('target' in event)) {
         event.target = this;
