@@ -6,7 +6,7 @@ class LoadingAction extends EventDispatcher {
   private manifest: Array<any>;
   private queue: createjs.LoadQueue;
 
-  constructor(manifest:Array<any>){
+  constructor(manifest:Array<any>) {
     super(null);
     this.manifest = manifest;
 

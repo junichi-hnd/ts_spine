@@ -1708,7 +1708,6 @@ spine.SkeletonJson.prototype = {
 	readSkeletonData: function (root, name) {
 		var skeletonData = new spine.SkeletonData();
 		skeletonData.name = name;
-
 		// Skeleton.
 		var skeletonMap = root["skeleton"];
 		if (skeletonMap) {

@@ -80,7 +80,7 @@ class Event {
     return 'DOMMouseScroll';
   }
 
-  constructor(public type:string, public params:any = {}){
+  constructor(public type:string, public params: any = {}) {
     this.target = null;
   }
 }

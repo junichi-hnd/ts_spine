@@ -393,6 +393,7 @@ declare module spine {
         regionHeight: number;
         regionOriginalWidth: number;
         regionOriginalHeight: number;
+        partsName: any;
 
         setUVs(u: number, v: number, u2: number, v2: number, rotate: number): void;
         updateOffset(): void;

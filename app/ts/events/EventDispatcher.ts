@@ -5,12 +5,21 @@ class EventDispatcher implements IEventDispatcher {
   private _events: Array<any>;
   private _context: any;
 
-  constructor(context: any) {
+  constructor(context?: any) {
     this._events = [];
     this._context = context;
   }
 
-  addEventListener(type: string, callback: Function, context?: any, priority: number = 0): void {
+  public one(type: string, callback: Function, context?: any, priority: number = 0): void {
+    const handler: Function = () => {
+      this.off(type, handler);
+      callback.apply(this, arguments);
+    };
+    handler.bind(this);
+    this.on(type, callback, context, priority);
+  }
+
+  public addEventListener(type: string, callback: Function, context?: any, priority: number = 0): void {
     this._events[type] = this._events.hasOwnProperty(type) ?
       this._events[type] : {};
 
@@ -39,10 +48,11 @@ class EventDispatcher implements IEventDispatcher {
     }
   }
 
-  on(type: string, callback: Function, context?: any, priority: number = 0): void {
+  public on(type: string, callback: Function, context?: any, priority: number = 0): void {
     this.addEventListener(type, callback, context, priority);
   }
-  removeEventListener(type: string, callback: Function): void {
+
+  public removeEventListener(type: string, callback: Function): void {
     const listeners: Array<any> = this._events[type] ? this._events[type].listeners : null;
     if (!listeners || listeners.length < 1) {
       return;
@@ -61,11 +71,11 @@ class EventDispatcher implements IEventDispatcher {
     }
   }
 
-  off(type: string, callback: Function): void {
+  public off(type: string, callback: Function): void {
     this.removeEventListener(type, callback);
   }
 
-  hasEventListener(type: string, callback: Function): boolean {
+  public hasEventListener(type: string, callback: Function): boolean {
     const listeners: any = this._events[type] ? this._events[type].listeners : null;
     if (!listeners) {
       return false;
@@ -82,7 +92,7 @@ class EventDispatcher implements IEventDispatcher {
     return false;
   }
 
-  dispatchEvent(event):void {
+  public dispatchEvent(event: any): void {
     const type: string = event.type;
     const _eventType: any = this._events[type];
     const listeners: Array<any> = (_eventType !== null && typeof _eventType !== 'undefined') ? _eventType.listeners : null;
@@ -92,7 +102,7 @@ class EventDispatcher implements IEventDispatcher {
     for (let i:number = listeners.length - 1; i >= 0; i--) {
       const listener: any = listeners[i];
       const callback: Function = listener.callback;
-      const callbackContext = listener.context ? listener.context : this._context;
+      const callbackContext: any = listener.context ? listener.context : this._context;
       if (!('target' in event)) {
         event.target = this;
       }
@@ -105,12 +115,24 @@ class EventDispatcher implements IEventDispatcher {
     }
   }
 
-  trigger(event:any):void {
+  public trigger(event:any):void {
     this.dispatchEvent(event);
   }
 
-  fire(event:any):void {
+  public fire(event:any):void {
     this.dispatchEvent(event);
+  }
+
+  /**
+   * remove all event listeners
+   */
+  public removeAllEventListener(): void {
+    for(let key in this._events) {
+      if(this._events.hasOwnProperty(key)) {
+        this._events[key].listeners.length = 0;
+        delete this._events[key];
+      }
+    }
   }
 }
 

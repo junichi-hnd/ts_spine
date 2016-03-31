@@ -54,7 +54,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "8145b6a2f5f7257a8ef8"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "515ce3d1d6a04fcec57c"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -572,67 +572,12 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(18);
-	module.exports = __webpack_require__(8);
+	__webpack_require__(20);
+	module.exports = __webpack_require__(9);
 
 
 /***/ },
 /* 1 */
-/***/ function(module, exports) {
-
-	"use strict";
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	var LoadingManifest = function () {
-	    function LoadingManifest() {
-	        _classCallCheck(this, LoadingManifest);
-	    }
-	
-	    _createClass(LoadingManifest, null, [{
-	        key: 'getPartsManifest',
-	        value: function getPartsManifest() {
-	            var prefix = './images/parts/';
-	            var jsonPrefix = './data/';
-	            return [{ src: './images/parts.png', id: 'sprite' }, { src: prefix + 'eye_indifferent.png' }, { src: prefix + 'eye_surprised.png' }, { src: prefix + 'front_bracer.png' }, { src: prefix + 'front_fist_closed.png' }, { src: prefix + 'front_fist_open.png' }, { src: prefix + 'front_foot_bend1.png' }, { src: prefix + 'front_foot_bend2.png' }, { src: prefix + 'front_foot.png' }, { src: prefix + 'front_shin.png' }, { src: prefix + 'front_thigh.png' }, { src: prefix + 'front_upper_arm.png' }, { src: prefix + 'goggles.png' }, { src: prefix + 'gun.png' }, { src: prefix + 'head.png' }, { src: prefix + 'mouth_grind.png' }, { src: prefix + 'mouth_oooo.png' }, { src: prefix + 'mouth_smile.png' }, { src: prefix + 'muzzle.png' }, { src: prefix + 'neck.png' }, { src: prefix + 'rear_bracer.png' }, { src: prefix + 'rear_foot_bend1.png' }, { src: prefix + 'rear_foot_bend2.png' }, { src: prefix + 'rear_foot.png' }, { src: prefix + 'rear_shin.png' }, { src: prefix + 'rear_thigh.png' }, { src: prefix + 'rear_upper_arm.png' }, { src: prefix + 'torso.png' }, { src: jsonPrefix + '/parts.json', id: LoadingManifest.PARTS_JSON }, { src: jsonPrefix + '/skelton.json', id: LoadingManifest.SKELTON_JSON }];
-	        }
-	    }, {
-	        key: 'PARTS_JSON',
-	        get: function get() {
-	            return 'parts_json';
-	        }
-	    }, {
-	        key: 'SKELTON_JSON',
-	        get: function get() {
-	            return 'skelton_json';
-	        }
-	    }, {
-	        key: 'SPRITE_JSON_PATH',
-	        get: function get() {
-	            return './data/parts.json';
-	        }
-	    }, {
-	        key: 'SKELTON_JSON_PATH',
-	        get: function get() {
-	            return './data/skelton.json';
-	        }
-	    }, {
-	        key: 'PARTS_SPRITE_PATH',
-	        get: function get() {
-	            return './images/parts.png';
-	        }
-	    }]);
-	
-	    return LoadingManifest;
-	}();
-	
-	Object.defineProperty(exports, "__esModule", { value: true });
-	exports.default = LoadingManifest;
-
-/***/ },
-/* 2 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -754,6 +699,61 @@
 	
 	Object.defineProperty(exports, "__esModule", { value: true });
 	exports.default = Event;
+
+/***/ },
+/* 2 */
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	var LoadingManifest = function () {
+	    function LoadingManifest() {
+	        _classCallCheck(this, LoadingManifest);
+	    }
+	
+	    _createClass(LoadingManifest, null, [{
+	        key: 'getPartsManifest',
+	        value: function getPartsManifest() {
+	            var prefix = './images/parts/';
+	            var jsonPrefix = './data/';
+	            return [{ src: './images/parts.png', id: 'sprite' }, { src: prefix + 'eye_indifferent.png' }, { src: prefix + 'eye_surprised.png' }, { src: prefix + 'front_bracer.png' }, { src: prefix + 'front_fist_closed.png' }, { src: prefix + 'front_fist_open.png' }, { src: prefix + 'front_foot_bend1.png' }, { src: prefix + 'front_foot_bend2.png' }, { src: prefix + 'front_foot.png' }, { src: prefix + 'front_shin.png' }, { src: prefix + 'front_thigh.png' }, { src: prefix + 'front_upper_arm.png' }, { src: prefix + 'goggles.png' }, { src: prefix + 'gun.png' }, { src: prefix + 'head.png' }, { src: prefix + 'mouth_grind.png' }, { src: prefix + 'mouth_oooo.png' }, { src: prefix + 'mouth_smile.png' }, { src: prefix + 'muzzle.png' }, { src: prefix + 'neck.png' }, { src: prefix + 'rear_bracer.png' }, { src: prefix + 'rear_foot_bend1.png' }, { src: prefix + 'rear_foot_bend2.png' }, { src: prefix + 'rear_foot.png' }, { src: prefix + 'rear_shin.png' }, { src: prefix + 'rear_thigh.png' }, { src: prefix + 'rear_upper_arm.png' }, { src: prefix + 'torso.png' }, { src: jsonPrefix + '/parts.json', id: LoadingManifest.PARTS_JSON }, { src: jsonPrefix + '/skelton.json', id: LoadingManifest.SKELTON_JSON }];
+	        }
+	    }, {
+	        key: 'PARTS_JSON',
+	        get: function get() {
+	            return 'parts_json';
+	        }
+	    }, {
+	        key: 'SKELTON_JSON',
+	        get: function get() {
+	            return 'skelton_json';
+	        }
+	    }, {
+	        key: 'SPRITE_JSON_PATH',
+	        get: function get() {
+	            return './data/parts.json';
+	        }
+	    }, {
+	        key: 'SKELTON_JSON_PATH',
+	        get: function get() {
+	            return './data/skelton.json';
+	        }
+	    }, {
+	        key: 'PARTS_SPRITE_PATH',
+	        get: function get() {
+	            return './images/parts.png';
+	        }
+	    }]);
+	
+	    return LoadingManifest;
+	}();
+	
+	Object.defineProperty(exports, "__esModule", { value: true });
+	exports.default = LoadingManifest;
 
 /***/ },
 /* 3 */
@@ -1151,9 +1151,9 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var Event_1 = __webpack_require__(2);
+	var Event_1 = __webpack_require__(1);
 	var EventDispatcher_1 = __webpack_require__(7);
-	var LoadingManifest_1 = __webpack_require__(1);
+	var LoadingManifest_1 = __webpack_require__(2);
 	
 	var LoadingAction = function (_EventDispatcher_1$de) {
 	    _inherits(LoadingAction, _EventDispatcher_1$de);
@@ -1213,6 +1213,21 @@
 	    }
 	
 	    _createClass(EventDispatcher, [{
+	        key: 'one',
+	        value: function one(type, callback, context) {
+	            var _this = this,
+	                _arguments = arguments;
+	
+	            var priority = arguments.length <= 3 || arguments[3] === undefined ? 0 : arguments[3];
+	
+	            var handler = function handler() {
+	                _this.off(type, handler);
+	                callback.apply(_this, _arguments);
+	            };
+	            handler.bind(this);
+	            this.on(type, callback, context, priority);
+	        }
+	    }, {
 	        key: 'addEventListener',
 	        value: function addEventListener(type, callback, context) {
 	            var priority = arguments.length <= 3 || arguments[3] === undefined ? 0 : arguments[3];
@@ -1325,6 +1340,16 @@
 	        value: function fire(event) {
 	            this.dispatchEvent(event);
 	        }
+	    }, {
+	        key: 'removeAllEventListener',
+	        value: function removeAllEventListener() {
+	            for (var key in this._events) {
+	                if (this._events.hasOwnProperty(key)) {
+	                    this._events[key].listeners.length = 0;
+	                    delete this._events[key];
+	                }
+	            }
+	        }
 	    }]);
 	
 	    return EventDispatcher;
@@ -1343,10 +1368,95 @@
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
-	var Event_1 = __webpack_require__(2);
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Event_1 = __webpack_require__(1);
+	
+	var MouseEvent = function (_Event_1$default) {
+	    _inherits(MouseEvent, _Event_1$default);
+	
+	    function MouseEvent(type) {
+	        var params = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
+	
+	        _classCallCheck(this, MouseEvent);
+	
+	        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(MouseEvent).call(this, type, params));
+	
+	        _this.type = type;
+	        _this.params = params;
+	        return _this;
+	    }
+	
+	    _createClass(MouseEvent, null, [{
+	        key: 'CLICK',
+	        get: function get() {
+	            return 'click';
+	        }
+	    }, {
+	        key: 'DBLCLICK',
+	        get: function get() {
+	            return 'dblclick';
+	        }
+	    }, {
+	        key: 'MOUSE_OUT',
+	        get: function get() {
+	            return 'mouseout';
+	        }
+	    }, {
+	        key: 'MOUSE_OVER',
+	        get: function get() {
+	            return 'mouseover';
+	        }
+	    }, {
+	        key: 'MOUSE_UP',
+	        get: function get() {
+	            return 'mouseup';
+	        }
+	    }, {
+	        key: 'MOUSE_DOWN',
+	        get: function get() {
+	            return 'mousedown';
+	        }
+	    }, {
+	        key: 'MOUSE_MOVE',
+	        get: function get() {
+	            return 'mousemove';
+	        }
+	    }, {
+	        key: 'MOUSE_WHEEL',
+	        get: function get() {
+	            return 'mousewheel';
+	        }
+	    }, {
+	        key: 'DOM_MOUSE_SCROLL',
+	        get: function get() {
+	            return 'DOM_MOUSE_SCROLL';
+	        }
+	    }]);
+	
+	    return MouseEvent;
+	}(Event_1.default);
+	
+	Object.defineProperty(exports, "__esModule", { value: true });
+	exports.default = MouseEvent;
+
+/***/ },
+/* 9 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	var Event_1 = __webpack_require__(1);
+	var MouseEvent_1 = __webpack_require__(8);
 	var LoadingAction_1 = __webpack_require__(6);
-	var LoadingManifest_1 = __webpack_require__(1);
-	var SkeletonRenderer_1 = __webpack_require__(9);
+	var LoadingManifest_1 = __webpack_require__(2);
+	var SkeletonRenderer_1 = __webpack_require__(10);
 	
 	var Main = function () {
 	    function Main() {
@@ -1363,7 +1473,7 @@
 	            var manifest = LoadingManifest_1.default.getPartsManifest();
 	            var action = new LoadingAction_1.default(manifest);
 	            action.start();
-	            action.on(Event_1.default.COMPLETE, this.onCompleted, null);
+	            action.one(Event_1.default.COMPLETE, this.onCompleted, null);
 	        }
 	    }, {
 	        key: 'onCompleted',
@@ -1382,6 +1492,9 @@
 	            canvas.width = window.innerWidth;
 	            canvas.height = window.innerHeight;
 	            renderer.animate('spine');
+	            document.addEventListener(MouseEvent_1.default.CLICK, function () {
+	                renderer.changeParts('googles_complementary', 'goggles');
+	            });
 	        }
 	    }]);
 	
@@ -1392,8 +1505,8 @@
 	main.init();
 
 /***/ },
-/* 9 */
-/***/ function(module, exports) {
+/* 10 */
+/***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 	
@@ -1401,24 +1514,28 @@
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
+	var SpineImageData_1 = __webpack_require__(11);
+	
 	var SkeletonRenderer = function () {
 	    function SkeletonRenderer(imagesPath) {
 	        _classCallCheck(this, SkeletonRenderer);
 	
 	        this.imagesPath = imagesPath;
 	        this.lastTime = Date.now();
+	        this.imageData = new SpineImageData_1.default();
 	    }
 	
 	    _createClass(SkeletonRenderer, [{
-	        key: "load",
+	        key: 'load',
 	        value: function load(jsonText) {
+	            var _this = this;
+	
 	            var imagesPath = this.imagesPath;
 	            var json = new spine.SkeletonJson({
 	                newRegionAttachment: function newRegionAttachment(skin, name, path) {
-	                    var image = new Image();
-	                    image.src = "" + imagesPath + path + ".png";
+	                    _this.imageData.add('' + imagesPath + path + '.png', name);
 	                    var attachment = new spine.RegionAttachment(name);
-	                    attachment.rendererObject = image;
+	                    attachment.partsName = name;
 	                    return attachment;
 	                },
 	                newBoundingBoxAttachment: function newBoundingBoxAttachment(skin, name) {
@@ -1433,7 +1550,7 @@
 	            this.state = new spine.AnimationState(stateData);
 	        }
 	    }, {
-	        key: "update",
+	        key: 'update',
 	        value: function update() {
 	            var now = Date.now();
 	            var delta = (now - this.lastTime) * 0.001;
@@ -1443,7 +1560,7 @@
 	            this.skeleton.updateWorldTransform();
 	        }
 	    }, {
-	        key: "render",
+	        key: 'render',
 	        value: function render(context) {
 	            var skeleton = this.skeleton;
 	            var drawOrder = skeleton.drawOrder;
@@ -1457,20 +1574,20 @@
 	                var x = bone.worldX + attachment.x * bone.m00 + attachment.y * bone.m01;
 	                var y = bone.worldY + attachment.x * bone.m10 + attachment.y * bone.m11;
 	                var rotation = -(bone.worldRotation + attachment.rotation) * Math.PI / 180;
-	                var w = attachment.width * bone.worldScaleX,
-	                    h = attachment.height * bone.worldScaleY;
+	                var w = attachment.width * bone.worldScaleX;
+	                var h = attachment.height * bone.worldScaleY;
 	                context.translate(x, y);
 	                context.rotate(rotation);
-	                context.drawImage(attachment.rendererObject, -w / 2, -h / 2, w, h);
+	                context.drawImage(this.imageData.getImageByKey(attachment.partsName), -w / 2, -h / 2, w, h);
 	                context.rotate(-rotation);
 	                context.translate(-x, -y);
 	            }
 	            context.translate(-skeleton.x, -skeleton.y);
 	        }
 	    }, {
-	        key: "animate",
+	        key: 'animate',
 	        value: function animate(id) {
-	            var _this = this;
+	            var _this2 = this;
 	
 	            var canvas = document.getElementById(id);
 	            var context = canvas.getContext('2d');
@@ -1479,11 +1596,17 @@
 	            };
 	            var renderFrame = function renderFrame() {
 	                context.clearRect(0, 0, canvas.width, canvas.height);
-	                _this.update();
-	                _this.render(context);
+	                _this2.update();
+	                _this2.render(context);
 	                requestAnimationFrame(renderFrame);
 	            };
 	            renderFrame();
+	        }
+	    }, {
+	        key: 'changeParts',
+	        value: function changeParts(id, name) {
+	            console.log('wanna change parts');
+	            this.imageData.add('' + this.imagesPath + id + '.png', name);
 	        }
 	    }]);
 	
@@ -1494,19 +1617,56 @@
 	exports.default = SkeletonRenderer;
 
 /***/ },
-/* 10 */
+/* 11 */
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	var SpineImageData = function () {
+	    function SpineImageData() {
+	        _classCallCheck(this, SpineImageData);
+	
+	        this.imageList = {};
+	    }
+	
+	    _createClass(SpineImageData, [{
+	        key: "add",
+	        value: function add(url, key) {
+	            var image = new Image();
+	            image.src = url;
+	            this.imageList[key] = image;
+	        }
+	    }, {
+	        key: "getImageByKey",
+	        value: function getImageByKey(key) {
+	            return this.imageList[key];
+	        }
+	    }]);
+	
+	    return SpineImageData;
+	}();
+	
+	Object.defineProperty(exports, "__esModule", { value: true });
+	exports.default = SpineImageData;
+
+/***/ },
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	  XmlEntities: __webpack_require__(12),
-	  Html4Entities: __webpack_require__(11),
+	  XmlEntities: __webpack_require__(14),
+	  Html4Entities: __webpack_require__(13),
 	  Html5Entities: __webpack_require__(3),
 	  AllHtmlEntities: __webpack_require__(3)
 	};
 
 
 /***/ },
-/* 11 */
+/* 13 */
 /***/ function(module, exports) {
 
 	var HTML_ALPHA = ['apos', 'nbsp', 'iexcl', 'cent', 'pound', 'curren', 'yen', 'brvbar', 'sect', 'uml', 'copy', 'ordf', 'laquo', 'not', 'shy', 'reg', 'macr', 'deg', 'plusmn', 'sup2', 'sup3', 'acute', 'micro', 'para', 'middot', 'cedil', 'sup1', 'ordm', 'raquo', 'frac14', 'frac12', 'frac34', 'iquest', 'Agrave', 'Aacute', 'Acirc', 'Atilde', 'Auml', 'Aring', 'Aelig', 'Ccedil', 'Egrave', 'Eacute', 'Ecirc', 'Euml', 'Igrave', 'Iacute', 'Icirc', 'Iuml', 'ETH', 'Ntilde', 'Ograve', 'Oacute', 'Ocirc', 'Otilde', 'Ouml', 'times', 'Oslash', 'Ugrave', 'Uacute', 'Ucirc', 'Uuml', 'Yacute', 'THORN', 'szlig', 'agrave', 'aacute', 'acirc', 'atilde', 'auml', 'aring', 'aelig', 'ccedil', 'egrave', 'eacute', 'ecirc', 'euml', 'igrave', 'iacute', 'icirc', 'iuml', 'eth', 'ntilde', 'ograve', 'oacute', 'ocirc', 'otilde', 'ouml', 'divide', 'Oslash', 'ugrave', 'uacute', 'ucirc', 'uuml', 'yacute', 'thorn', 'yuml', 'quot', 'amp', 'lt', 'gt', 'oelig', 'oelig', 'scaron', 'scaron', 'yuml', 'circ', 'tilde', 'ensp', 'emsp', 'thinsp', 'zwnj', 'zwj', 'lrm', 'rlm', 'ndash', 'mdash', 'lsquo', 'rsquo', 'sbquo', 'ldquo', 'rdquo', 'bdquo', 'dagger', 'dagger', 'permil', 'lsaquo', 'rsaquo', 'euro', 'fnof', 'alpha', 'beta', 'gamma', 'delta', 'epsilon', 'zeta', 'eta', 'theta', 'iota', 'kappa', 'lambda', 'mu', 'nu', 'xi', 'omicron', 'pi', 'rho', 'sigma', 'tau', 'upsilon', 'phi', 'chi', 'psi', 'omega', 'alpha', 'beta', 'gamma', 'delta', 'epsilon', 'zeta', 'eta', 'theta', 'iota', 'kappa', 'lambda', 'mu', 'nu', 'xi', 'omicron', 'pi', 'rho', 'sigmaf', 'sigma', 'tau', 'upsilon', 'phi', 'chi', 'psi', 'omega', 'thetasym', 'upsih', 'piv', 'bull', 'hellip', 'prime', 'prime', 'oline', 'frasl', 'weierp', 'image', 'real', 'trade', 'alefsym', 'larr', 'uarr', 'rarr', 'darr', 'harr', 'crarr', 'larr', 'uarr', 'rarr', 'darr', 'harr', 'forall', 'part', 'exist', 'empty', 'nabla', 'isin', 'notin', 'ni', 'prod', 'sum', 'minus', 'lowast', 'radic', 'prop', 'infin', 'ang', 'and', 'or', 'cap', 'cup', 'int', 'there4', 'sim', 'cong', 'asymp', 'ne', 'equiv', 'le', 'ge', 'sub', 'sup', 'nsub', 'sube', 'supe', 'oplus', 'otimes', 'perp', 'sdot', 'lceil', 'rceil', 'lfloor', 'rfloor', 'lang', 'rang', 'loz', 'spades', 'clubs', 'hearts', 'diams'];
@@ -1659,7 +1819,7 @@
 
 
 /***/ },
-/* 12 */
+/* 14 */
 /***/ function(module, exports) {
 
 	var ALPHA_INDEX = {
@@ -1820,7 +1980,7 @@
 
 
 /***/ },
-/* 13 */
+/* 15 */
 /***/ function(module, exports) {
 
 	// Copyright Joyent, Inc. and other Node contributors.
@@ -1906,7 +2066,7 @@
 
 
 /***/ },
-/* 14 */
+/* 16 */
 /***/ function(module, exports) {
 
 	// Copyright Joyent, Inc. and other Node contributors.
@@ -1976,17 +2136,17 @@
 
 
 /***/ },
-/* 15 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	exports.decode = exports.parse = __webpack_require__(13);
-	exports.encode = exports.stringify = __webpack_require__(14);
+	exports.decode = exports.parse = __webpack_require__(15);
+	exports.encode = exports.stringify = __webpack_require__(16);
 
 
 /***/ },
-/* 16 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1998,7 +2158,7 @@
 
 
 /***/ },
-/* 17 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*eslint-env browser*/
@@ -2039,7 +2199,7 @@
 	};
 	ansiHTML.setColors(colors);
 	
-	var Entities = __webpack_require__(10).AllHtmlEntities;
+	var Entities = __webpack_require__(12).AllHtmlEntities;
 	var entities = new Entities();
 	
 	exports.showProblems =
@@ -2080,7 +2240,7 @@
 
 
 /***/ },
-/* 18 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(__resourceQuery, module) {/*eslint-env browser*/
@@ -2095,7 +2255,7 @@
 	  warn: true
 	};
 	if (true) {
-	  var querystring = __webpack_require__(15);
+	  var querystring = __webpack_require__(17);
 	  var overrides = querystring.parse(__resourceQuery.slice(1));
 	  if (overrides.path) options.path = overrides.path;
 	  if (overrides.timeout) options.timeout = overrides.timeout;
@@ -2174,11 +2334,11 @@
 	}
 	
 	function createReporter() {
-	  var strip = __webpack_require__(16);
+	  var strip = __webpack_require__(18);
 	
 	  var overlay;
 	  if (typeof document !== 'undefined' && options.overlay) {
-	    overlay = __webpack_require__(17);
+	    overlay = __webpack_require__(19);
 	  }
 	
 	  return {
@@ -2200,7 +2360,7 @@
 	  };
 	}
 	
-	var processUpdate = __webpack_require__(19);
+	var processUpdate = __webpack_require__(21);
 	
 	var customHandler;
 	function processMessage(obj) {
@@ -2239,10 +2399,10 @@
 	  };
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, "?path=/__webpack_hmr&timeout=20000&reload=true", __webpack_require__(20)(module)))
+	/* WEBPACK VAR INJECTION */}.call(exports, "?path=/__webpack_hmr&timeout=20000&reload=true", __webpack_require__(22)(module)))
 
 /***/ },
-/* 19 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -2380,7 +2540,7 @@
 
 
 /***/ },
-/* 20 */
+/* 22 */
 /***/ function(module, exports) {
 
 	module.exports = function(module) {
